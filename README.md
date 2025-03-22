@@ -1,7 +1,3 @@
-Here's a more organized version of your description for the Pharmaverse project:
-
----
-
 **Pharmaverse - Smart Drug Inventory & Supply Management System**
 
 **Overview**  
