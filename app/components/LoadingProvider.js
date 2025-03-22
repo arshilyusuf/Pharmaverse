@@ -1,17 +1,16 @@
 "use client";
 import { useState, useEffect, Suspense } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import HashLoader from "react-spinners/HashLoader";
 
 function LoadingContent({ setLoading }) {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     setLoading(true);
     const timeout = setTimeout(() => setLoading(false), 500); // Minimum loading time
     return () => clearTimeout(timeout);
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return null;
 }
