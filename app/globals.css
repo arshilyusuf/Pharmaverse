@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
+.inter-font {
+  font-family: var(--font-inter) !important;
+}
+
+/* Light Mode (default) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #CBD3CF;
+  --background-dark: #c4cdc8;
+  --foreground: #4B421B;
+  --foreground-light:#766a3b;
+  --foreground-xlight:#868446;
+  --userlist-bg:#302A0D;
+  --font-sans: "Host Grotesk", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-funnel-display: "Funnel Display", sans-serif;
+  --font-nav:#4B421B;
+  --color-brown:#4B421B;
+  --color-white: #CBD3CF;
+  --login-text:#CBD3CF;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark Mode */
+[data-theme='dark'] {
+  --background:#2c2815;
+  --foreground:#3a3727;
+   --foreground-light:#4e4626;
+  --foreground-xlight:#4c4b27;
+  --font-sans: "Host Grotesk", sans-serif;
+  --font-nav:#CBD3CF;
+  --color-brown:#4B421B;
+  --color-white: #CBD3CF;
+  --login-text:#4B421B;
+
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--font-nav);
+  font-family: var(--font-sans);
 }
