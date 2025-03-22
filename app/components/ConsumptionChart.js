@@ -13,7 +13,7 @@ import HashLoader from "react-spinners/HashLoader";
 
 async function getConsumptionData() {
   try {
-    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/consumption`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/consumption`);
     const data = await res.json();
 
     return data;
