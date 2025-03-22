@@ -2,7 +2,7 @@ import DashboardContent from "../components/DashboardContent";
 
 async function fetchSupplyOrders() {
    try {
-     const res = await fetch(`${process.env.NEXTAUTH_URL}/api/supplyorders`, {
+     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/supplyorders`, {
        cache: "no-store", 
      });
 
