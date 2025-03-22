@@ -22,14 +22,14 @@ export default function DrugItem({
 
   const handleEdit = async () => {
     try {
-      const response = await fetch(`${process.env.NEXTAUTH_URL}/api/drugs/${id}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/drugs/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(editedDrug),
       });
-      console.log("request made to: ", `${process.env.NEXTAUTH_URL}/api/drugs/${id}`);
+      console.log("request made to: ", `${process.env.NEXT_PUBLIC_API_URL}/api/drugs/${id}`);
       console.log("response", response);
 
       if (!response.ok) throw new Error("Failed to update drug");
@@ -46,7 +46,7 @@ export default function DrugItem({
   const handleDelete = async () => {
     if (window.confirm("Are you sure you want to delete this drug?")) {
       try {
-        const response = await fetch(`${process.env.NEXTAUTH_URL}/api/drugs/${id}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/drugs/${id}`, {
           method: "DELETE",
         });
 
