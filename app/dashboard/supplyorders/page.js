@@ -7,7 +7,7 @@ import { useSession } from "next-auth/react";
 import Loader from "@/app/components/Loader";
 async function fetchSupplyOrders() {
   try {
-    const res = await fetch("/api/supplyorders", {
+    const res = await fetch(`${process.env.NEXTAUTH_URL}supplyorders`, {
       cache: "no-store", // For real-time data
     });
 

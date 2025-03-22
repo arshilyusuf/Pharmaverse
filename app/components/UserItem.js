@@ -5,7 +5,7 @@ export default function UserItem({ user, onDelete}) {
   const handleDelete = async () => {
     if (window.confirm("Are you sure you want to delete this user?")) {
       try {
-        const response = await fetch(`/api/users/${user._id}`, {
+        const response = await fetch(`${process.env.NEXTAUTH_URL}/api/users/${user._id}`, {
           method: "DELETE",
         });
         onDelete(user._id);

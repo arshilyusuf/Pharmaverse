@@ -17,7 +17,7 @@ export default function AddSupplyOrderForm({ onClose, onOrderAdded }) {
 
   const validateDrugID = async (drugID) => {
     try {
-      const res = await fetch(`/api/drugs/${drugID}`);
+      const res = await fetch(`${process.env.NEXTAUTH_URL}/api/drugs/${drugID}`);
       if (!res.ok) {
         throw new Error("Invalid Drug ID");
       }
@@ -45,7 +45,7 @@ export default function AddSupplyOrderForm({ onClose, onOrderAdded }) {
         return;
       }
       // console.log(formData);
-      const response = await fetch("http://localhost:3000/api/supplyorders", {
+      const response = await fetch(`${process.env.NEXTAUTH_URL}/api/supplyorders`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -11,9 +11,9 @@ async function getDrugs() {
       cache: "no-store", // For real-time data
     });
 
-    if (!res.ok) {
-      throw new Error("Failed to fetch drugs");
-    }
+    // if (!res.ok) {
+    //   throw new Error("Failed to fetch drugs");
+    // }
 
     return res.json();
   } catch (error) {
