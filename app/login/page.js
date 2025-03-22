@@ -75,7 +75,7 @@ export default function Page() {
             </button>
           </form>
           <p className="text-center mt-4">
-            Don't have an account?{" "}
+                {`Don't have an account? `}
             <a href="/signup" className="text-white hover:text-blue-300">
               Sign up
             </a>
