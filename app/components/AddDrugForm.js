@@ -17,7 +17,7 @@ export default function AddDrugForm({ onClose, onDrugAdded }) {
     setLoading(true);
 
     try {
-      const response = await fetch(`${process.env.NEXTAUTH_URL}/api/drugs`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/drugs`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
