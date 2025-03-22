@@ -8,7 +8,7 @@ export default function OrderItem({ order, onDelete }) {
   const handleDelete = async () => {
     if (window.confirm("Are you sure you want to delete this supply order?")) {
       try {
-        const response = await fetch(`${process.env.NEXTAUTH_URL}/api/supplyorders/${order._id}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/supplyorders/${order._id}`, {
           method: "DELETE",
         });
 
