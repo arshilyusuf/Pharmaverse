@@ -7,7 +7,7 @@ import { useSession } from "next-auth/react";
 import Loader from "@/app/components/Loader";
 async function getDrugs() {
   try {
-    const res = await fetch("http://localhost:3000/api/drugs", {
+    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/drugs`, {
       cache: "no-store", // For real-time data
     });
 
