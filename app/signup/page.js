@@ -49,7 +49,7 @@ export default function Page() {
         throw new Error("Invalid Admin Verification Key");
       }
 
-      const response = await fetch(`${process.env.NEXTAUTH_URL}/api/signup`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
