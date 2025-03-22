@@ -75,9 +75,13 @@ export default function Page() {
             </button>
           </form>
           <p className="text-center mt-4">
+<<<<<<< HEAD
                 {`Don't have an account? `}
 
 
+=======
+            {`Don't have an account? `}
+>>>>>>> f2b106c44de768b3b090adbbbebe55dfaffffe53
             <a href="/signup" className="text-white hover:text-blue-300">
               Sign up
             </a>
